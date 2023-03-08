@@ -15,6 +15,7 @@ export default function Home() {
         <p
           className="description"
           onClick={() => {
+            console.log("xxxx");
             netlifyIdentity.open();
           }}
         >
