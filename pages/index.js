@@ -21,6 +21,14 @@ export default function Home() {
         >
           Get started by editing <code>pages/index.js</code>
         </p>
+        <button
+          onClick={() => {
+            console.log("xxxx");
+            netlifyIdentity.open();
+          }}
+        >
+          ccc
+        </button>
       </main>
 
       <Footer />
