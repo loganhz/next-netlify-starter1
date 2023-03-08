@@ -9,21 +9,20 @@ export default function Home() {
         <title>Next.js Starter!</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <div id="netlify-modal"></div>
 
       <main>
         <Header title="Welcome xxxx to my app!" />
-        <p
-          className="description"
-          onClick={() => {
-            console.log("xxxx");
-            netlifyIdentity.open();
-          }}
-        >
+        <p className="description">
           Get started by editing <code>pages/index.js</code>
         </p>
         <button
           onClick={() => {
             console.log("xxxx");
+            netlifyIdentity.init({
+              container: "#netlify-modal", // defaults to document.body
+              locale: "en", // defaults to 'en'
+            });
             netlifyIdentity.open();
           }}
         >
