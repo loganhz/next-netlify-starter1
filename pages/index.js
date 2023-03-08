@@ -1,7 +1,7 @@
-import Head from 'next/head'
-import Header from '@components/Header'
-import Footer from '@components/Footer'
-
+import Head from "next/head";
+import Header from "@components/Header";
+import Footer from "@components/Footer";
+import netlifyIdentity from "netlify-identity-widget";
 export default function Home() {
   return (
     <div className="container">
@@ -12,12 +12,17 @@ export default function Home() {
 
       <main>
         <Header title="Welcome to my app!" />
-        <p className="description">
+        <p
+          className="description"
+          onClick={() => {
+            netlifyIdentity.open();
+          }}
+        >
           Get started by editing <code>pages/index.js</code>
         </p>
       </main>
 
       <Footer />
     </div>
-  )
+  );
 }
